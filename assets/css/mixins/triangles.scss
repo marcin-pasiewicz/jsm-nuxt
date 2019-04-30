@@ -1,0 +1,21 @@
+/* Triangles decor */
+@mixin triangle-down-left($width, $height, $color) {
+  border-bottom: $height solid $color;
+  border-right: $width solid transparent;
+  height: 0;
+  width: 0;
+}
+
+@mixin triangle-down-right($width, $height, $color) {
+  border-bottom: $height solid $color;
+  border-left: $width solid transparent;
+  height: 0;
+  width: 0;
+}
+
+@mixin triangle-down-right-rwd($width, $height, $color) {
+  background: transparent;
+  background:linear-gradient(to bottom right, transparent 50%, $color 50%);
+  height: $height;
+  width: $width;
+}

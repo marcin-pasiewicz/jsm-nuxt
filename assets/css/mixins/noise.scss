@@ -1,0 +1,14 @@
+@mixin noise($img, $opacity) {
+  &:before {
+    content: "";
+    background: url('../../assets/img/'+ $img +'.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: $opacity;
+    height: 100%;
+    width: 100%;
+  }
+}

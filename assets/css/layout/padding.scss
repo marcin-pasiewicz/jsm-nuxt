@@ -1,0 +1,43 @@
+/* Padding */
+
+// Paddings
+$padding: 0 5 10 15 20 25 30 35 40 45 50 60 80 100;
+$padding-base: 80;
+$padding-base-mobile: 40;
+
+// Generators
+@mixin padding {
+  @each $i in $padding {
+    .p-#{$i} {
+      padding: #{$i}px;
+    }
+
+    .px-#{$i} {
+      padding-left: #{$i}px;
+      padding-right: #{$i}px;
+    }
+
+    .py-#{$i} {
+      padding-top: #{$i}px;
+      padding-bottom: #{$i}px;
+    }
+
+    .pt-#{$i} {
+      padding-top: #{$i}px;
+    }
+
+    .pb-#{$i} {
+      padding-bottom: #{$i}px;
+    }
+
+    .pr-#{$i} {
+      padding-right: #{$i}px;
+    }
+
+    .pl-#{$i} {
+      padding-left: #{$i}px;
+    }
+  }
+}
+
+@include padding;

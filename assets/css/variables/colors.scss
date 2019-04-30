@@ -1,0 +1,32 @@
+/* Colors palette */
+$colors: (
+  transparent: transparent,
+  black: #000,
+  white: #fff,
+  grey: #333,
+  light-grey: #656565,
+  gold: #D2B25B,
+  light-gold: #E1C782
+);
+
+@mixin color-selectors($map: $colors, $selector: 'cl', $property: 'color') {
+  @each $name, $value in $map {
+    .#{$selector}-#{$name} {
+      #{$property}: $value;
+    }
+  }
+}
+
+.bg-primary {
+  background-color: map-get($colors, white);
+}
+
+.bg-secondary {
+  background-color: map-get($colors, black);
+}
+
+.bg-transparent {
+  background: transparent;
+}
+
+@include color-selectors;

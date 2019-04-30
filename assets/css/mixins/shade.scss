@@ -1,0 +1,14 @@
+/* Shade effect */
+@import '../variables/colors.scss';
+
+@mixin shade($color, $opacity) {
+  &:after {
+    content: "";
+    background: rgba(map-get($colors, $color), $opacity);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+}

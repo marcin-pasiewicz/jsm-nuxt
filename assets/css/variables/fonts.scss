@@ -1,0 +1,59 @@
+/* Fonts */
+@import '../mixins/em.scss';
+
+@font-face {
+  font-family: 'League Spartan';
+  src: url('../../assets/fonts/LeagueSpartan-Bold.eot'); /* IE9 Compat Modes */
+  src: url('../../assets/fonts/LeagueSpartan-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../../assets/fonts/LeagueSpartan-Bold.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../../assets/fonts/LeagueSpartan-Bold.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../../assets/fonts/LeagueSpartan-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../../assets/fonts/LeagueSpartan-Bold.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+$font-title: 'League Spartan', cursive;
+$font-text: 'Lato', sans-serif;
+
+$font-size-xxl: em(60);
+$font-size-xl: em(36);
+$font-size-l: em(24);
+$font-size-m: em(18);
+$font-size-base: em(16);
+$font-size-s: em(14);
+$font-size-xs: em(12);
+$font-size-xxs: em(10);
+
+$font-size-xxl-mobile: em(56);
+$font-size-xl-mobile: em(32);
+
+.f-xxl {
+  font-size: $font-size-xxl;
+}
+
+.f-xl {
+  font-size: $font-size-xl;
+}
+
+.f-l {
+  font-size: $font-size-l;
+}
+
+.f-m {
+  font-size: $font-size-m;
+}
+
+.f-s {
+  font-size: $font-size-s;
+}
+
+.f-xs {
+  font-size: $font-size-xs;
+}
+
+.f-xxs {
+  font-size: $font-size-xxs;
+}
+
+.f-bold {
+  font-weight: bold;
+}

@@ -1,0 +1,30 @@
+/* Layout */
+$max-page-width: 1920px;
+$max-content-width: 800px;
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+#app {
+  max-width: $max-page-width;
+  margin: 0 auto;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.content {
+  max-width: $max-content-width;
+}
+
+.content-wide {
+  max-width: $max-page-width;
+}

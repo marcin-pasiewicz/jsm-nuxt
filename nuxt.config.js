@@ -14,7 +14,8 @@ export default {
       { hid: 'description', name: 'description', content: pkg.description }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
+      { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.7.1/css/all.css', integrity: 'sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr', crossorigin: 'anonymous' }
     ]
   },
 
@@ -27,6 +28,8 @@ export default {
   ** Global CSS
   */
   css: [
+    '@/assets/css/lib/flexboxgrid.min.css',
+    '@/assets/css/style.scss'
   ],
 
   /*
@@ -39,7 +42,9 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    'vue-scrollto/nuxt',
+    '~/modules/routes',
   ],
 
   /*

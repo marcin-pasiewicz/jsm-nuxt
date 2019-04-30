@@ -1,0 +1,40 @@
+/* Helper classes */
+.no-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.no-events {
+  pointer-events: none;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+.not-visible {
+  visibility: hidden;
+}
+
+.block {
+  display: block;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.cover {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}

@@ -1,0 +1,37 @@
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+}
+
+input {
+  border: 1px solid map-get($colors, grey);
+  display: block;
+  font-size: $font-size-s;
+  height: 40px;
+  margin-bottom: 20px;
+  padding: 0 15px;
+  outline: none;
+  width: 100%;
+}
+
+.btn {
+  background: map-get($colors, gold);
+  border: 1px solid transparent;
+  cursor: pointer;
+  display: inline-block;
+  font-size: $font-size-s;
+  font-weight: 600;
+  outline: 0;
+  padding: 15px 30px;
+  text-transform: uppercase;
+  transition: all .5s ease;
+  white-space: nowrap;
+
+  &:hover {
+    border: 1px solid map-get($colors, gold);
+    background: transparent;
+    color: map-get($colors, gold);
+  }
+}

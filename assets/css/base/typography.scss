@@ -1,0 +1,91 @@
+/* Typography */
+body {
+  font-family: $font-text;
+  font-size: 16px;
+  font-weight: 400;
+
+  @include sm {
+    font-size: 14px;
+  }
+}
+
+%heading {
+  font-family: $font-title;
+  font-weight: normal;
+  margin: 40px 0;
+  text-transform: uppercase;
+
+  @include sm {
+      margin: 0 0 20px;
+  }
+}
+
+h1 {
+  @extend %heading;
+  font-size: $font-size-xxl;
+
+  @include xs {
+      font-size: $font-size-xxl-mobile;
+  }
+}
+
+h2 {
+  @extend %heading;
+  font-size: $font-size-xl;
+
+  @include xs {
+      font-size: $font-size-xl-mobile;
+  }
+}
+
+h3 {
+  @extend %heading;
+  font-size: $font-size-l;
+}
+
+p {
+  margin: 0 0 20px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color .25s ease;
+
+  &.active,
+  &:hover {
+    color: map-get($colors, gold);
+  }
+}
+
+small {
+  font-size: $font-size-xxs;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.aling-justify {
+  text-align: justify;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.bold {
+  font-weight: bold;
+}

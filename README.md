@@ -1,4 +1,4 @@
-# jsm-nuxt
+ # jsm-nuxt
 
 > My superb Nuxt.js project
 

@@ -1,0 +1,43 @@
+/* Width & height sizes */
+
+// Sizes
+$sizes: 0 25 50 40 60 80 100;
+
+// Generators
+@mixin sizes {
+  @each $i in $sizes {
+    .w-#{$i} {
+      width: percentage($i/100);
+    }
+
+    .maxw-#{$i} {
+      max-width: percentage($i/100);
+    }
+
+    .vw-#{$i} {
+      width: $i * 1vw;
+    }
+
+    .h-#{$i} {
+      height: percentage($i/100);
+    }
+
+    .maxh-#{$i} {
+      max-height: percentage($i/100);
+    }
+
+    .vh-#{$i} {
+      height: $i * 1vh;
+    }
+  }
+}
+
+.w-auto {
+  width: auto;
+}
+
+.h-auto {
+  height: auto;
+}
+
+@include sizes;

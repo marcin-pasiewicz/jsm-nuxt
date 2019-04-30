@@ -1,0 +1,34 @@
+/* Main styles */
+
+// Variables
+@import './variables/colors';
+@import './variables/fonts';
+
+// Utils
+@import './utils/utils';
+
+// Mixins
+@import './mixins/triangles';
+@import './mixins/breakpoints';
+@import './mixins/shade';
+@import './mixins/noise';
+@import './mixins/em';
+
+// Global styles
+@import './base/base';
+@import './base/typography';
+@import './base/form';
+
+// Layout
+@import './layout/layout';
+@import './layout/margin';
+@import './layout/padding';
+@import './layout/size';
+@import './layout/indexes';
+
+// Modules
+@import './modules/slider';
+@import './modules/modal';
+
+// Animations
+@import './animations/transitions';
