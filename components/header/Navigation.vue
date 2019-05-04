@@ -1,26 +1,27 @@
 <template>
   <div class="navigation">
-    <nav class="flex between-xs middle-xs f-s" :class="{ active: mobileMenuActive, 'f-xs': isSticky}">
-      <router-link v-scroll-to="'#about'" to="/" class="mr-40 uppercase nav-link nowrap" @click="toggleNav">
+    <nav class="flex between-xs middle-xs" :class="{ active: mobileMenuActive, 'f-xs': isSticky}">
+      <router-link v-scroll-to="'#about'" to="/" class="mr-40 uppercase nav-link nowrap" @click.native="toggleNav">
         O kampanii
       </router-link>
-      <router-link v-scroll-to="'#ebook'" class="mr-40 uppercase nav-link nowrap" to="/" @click="toggleNav">
+      <router-link v-scroll-to="'#ebook'" class="mr-40 uppercase nav-link nowrap" to="/" @click.native="toggleNav">
         Ebook
       </router-link>
-      <router-link v-scroll-to="'#ambassadors'" class="mr-40 uppercase nav-link nowrap" to="/" @click="toggleNav">
+      <router-link v-scroll-to="'#ambassadors'" class="mr-40 uppercase nav-link nowrap" to="/" @click.native="toggleNav">
         Ambasadorzy
       </router-link>
-      <router-link v-scroll-to="'#contact'" class="mr-40 uppercase nav-link nowrap" to="/" @click="toggleNav">
+      <router-link v-scroll-to="'#contact'" class="mr-40 uppercase nav-link nowrap" to="/" @click.native="toggleNav">
         Kontakt
       </router-link>
-      <router-link class="mr-40 uppercase nav-link nowrap cl-gold" to="/map" @click="toggleNav">
+      <router-link class="mr-40 uppercase nav-link nowrap cl-gold" to="/map" @click.native="toggleNav">
         Mapa
       </router-link>
-      <router-link class="uppercase nav-link nowrap cl-gold" to="/blog" @click="toggleNav">
+      <router-link class="uppercase nav-link nowrap cl-gold" to="/blog" @click.native="toggleNav">
         Blog
       </router-link>
     </nav>
-    <i class="fas fa-bars relative f-xl mobile-nav zi-1" @click="toggleNav" />
+    <i v-if="!mobileMenuActive" class="fas fa-bars relative f-xl mobile-nav zi-1" @click="toggleNav" />
+    <i v-else class="fas fa-times fixed f-xl mobile-nav zi-1 close-nav cl-gold" :class="{ sticky: isSticky}" @click="toggleNav" /></i>
   </div>
 </template>
 
@@ -41,7 +42,10 @@ export default {
   },
   methods: {
     toggleNav() {
-      this.mobileMenuActive = !this.mobileMenuActive
+      if (window.innerWidth <= 768) {
+        this.mobileMenuActive = !this.mobileMenuActive
+        document.body.classList.toggle('no-scroll')
+      }
     }
   }
 }
@@ -53,8 +57,10 @@ export default {
   @import '~assets/css/mixins/breakpoints.scss';
 
   nav {
+    font-size: $font-size-s;
+
     @include sm {
-      background: rgba(map-get($colors, black), .9);
+      background: map-get($colors, black);
       flex-direction: column;
       justify-content: center;
       position: fixed;
@@ -67,6 +73,7 @@ export default {
       z-index: 1;
 
       &.active {
+        font-size: $font-size-m;
         opacity: 1;
         pointer-events: all;
       }
@@ -89,6 +96,11 @@ export default {
 
     @include sm {
       display: block;
+    }
+
+    &.close-nav {
+      right: 40px;
+      top: 20px;
     }
   }
 </style>

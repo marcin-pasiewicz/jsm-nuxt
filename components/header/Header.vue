@@ -1,5 +1,5 @@
 <template>
-  <header class="flex transparent between-xs middle-xs px-80 py-10 w-100 cl-white" :class="{sticky: isSticky, visible: isVisible, hidden: isHidden, main: this.$route.name == 'Home'}">
+  <header class="flex transparent between-xs middle-xs px-80 py-20 w-100 cl-white" :class="{sticky: isSticky, visible: isVisible, hidden: isHidden, main: this.$route.name == 'Home'}">
     <logo :width="isSticky ? 100 : 120" class="mr-20" />
     <navigation :is-sticky="isSticky" />
   </header>
@@ -65,7 +65,7 @@ export default {
     z-index: 9;
 
     @include sm {
-      padding: 10px 40px;
+      padding: 20px 40px;
     }
 
     &.main {
@@ -74,9 +74,14 @@ export default {
     }
 
     &.sticky {
-      background: rgba(map-get($colors, black), .8);
+      background: rgba(map-get($colors, black), .9);
       position: fixed;
+      padding: 10px 80px;
       top: -100px;
+
+      @include sm {
+        padding: 10px 40px;
+      }
     }
 
     &.hidden {

@@ -1,6 +1,6 @@
 <template>
   <section id="ambassadors" class="ambassadors relative no-scroll bg-primary">
-    <div class="tiles flex flex-wrap" :class="{display: profileVisible}">
+    <div class="tiles flex flex-wrap">
       <div class="tile wide flex middle-xs center-xs bg-secondary">
         <h3 class="m-0 cl-white">
           Ambasadorzy
@@ -17,12 +17,12 @@
             <p>
               Mistrz Polski Muay Thai z 2014 roku oraz Wice-Mistrz Polski Muay Thai IFMA z 2015 roku. Wicemistrz Polski IMFA także z 2017. Weganin.
             </p>
-            <a href="/" class="btn inline-block cl-black mt-20" target="_blank">Zobacz video</a>
+            <a href="/" class="btn inline-block mt-20" target="_blank">Zobacz video</a>
           </div>
         </div>
       </transition>
 
-      <div v-for="index in 30" :key="index" v-scroll-to="'#ambassadors'" class="tile flex person pointer relative bg-secondary zi-0" @click="showProfile()">
+      <div v-for="index in 34" :key="index" v-scroll-to="'#ambassadors'" class="tile flex person pointer relative bg-secondary zi-0" @click="showProfile()">
         <div class="photo w-100 h-100 absolute cover" :style="{'background-image': 'url(' + require('../../assets/img/ambassadors/siemaszko.jpg') + ')'}" />
         <h4 class="m-0 w-100 p-10 name uppercase flex bottom-xs start-xs zi-1">
           Kamil Siemaszko
@@ -58,19 +58,6 @@ export default {
 
   .ambassadors {
     .tiles {
-      &.display {
-        height: 0;
-        padding-bottom: 50%;
-
-        @include md {
-          padding-bottom: 70%;
-        }
-
-        @include xs {
-          padding-bottom: 125%;
-        }
-      }
-
       .tile {
         transition: width 500ms ease;
         width: calc(100% / 8);

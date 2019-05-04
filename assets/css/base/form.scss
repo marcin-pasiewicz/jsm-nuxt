@@ -20,6 +20,7 @@ input {
   background: map-get($colors, gold);
   border: 1px solid transparent;
   cursor: pointer;
+  color: map-get($colors, black);
   display: inline-block;
   font-size: $font-size-s;
   font-weight: 600;

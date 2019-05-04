@@ -24,6 +24,10 @@
     height: 15px;
     width: 15px;
 
+    &:hover {
+      background: map-get($colors, white);
+    }
+
     &.is-active {
       background: map-get($colors, gold);
     }

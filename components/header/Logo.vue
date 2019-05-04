@@ -16,3 +16,15 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+  @import '~assets/css/mixins/breakpoints.scss';
+
+  @include sm {
+    .logo {
+      img {
+        width: 100px;
+      }
+    }
+  }
+</style>

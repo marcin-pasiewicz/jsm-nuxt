@@ -7,7 +7,7 @@
       <div id="contact" class="contact flex middle-xs center-xs align-left px-40">
         <ul class="no-list">
           <li class="my-20">
-            <a class="block nowrap" href="mailto:kontakt@jasnastronamocy.pl" target="_blank"><i class="far fa-envelope cl-white inline-flex middle-xs center-xs f-l mr-20" /> kontakt@jasnastronamocy.pl</a>
+            <a class="block nowrap" href="mailto:kontakt@jasnastronamocy.pl"><i class="far fa-envelope cl-white inline-flex middle-xs center-xs f-l mr-20" /> kontakt@jasnastronamocy.pl</a>
           </li>
           <li class="my-20">
             <a class="block nowrap" href="http://www.facebook.com/jsmocy/" target="_blank"><i class="fab fa-facebook-f cl-white inline-flex middle-xs center-xs f-l mr-20" /> www.facebook.com/jsmocy</a>
