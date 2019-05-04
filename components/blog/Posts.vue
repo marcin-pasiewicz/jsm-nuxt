@@ -5,7 +5,7 @@
         <router-link :to="'/blog/post/' + index">
           <div class="post-photo cover w-100" :style="{'background-image': 'url(' + require('../../assets/img/workout.jpg') + ')'}" />
           <div class="post-info absolute w-100 p-20 cl-black">
-            <h4 class="mt-0 mb-10">
+            <h4 class="mt-0 mb-10 uppercase">
               Post title
             </h4>
             <p class="f-s mb-10">

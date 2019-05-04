@@ -20,7 +20,8 @@ body {
   }
 }
 
-h1 {
+h1,
+.h1 {
   @extend %heading;
   font-size: $font-size-xxl;
 
@@ -29,7 +30,8 @@ h1 {
   }
 }
 
-h2 {
+h2,
+.h2 {
   @extend %heading;
   font-size: $font-size-xl;
 
@@ -38,7 +40,8 @@ h2 {
   }
 }
 
-h3 {
+h3,
+.h3 {
   @extend %heading;
   font-size: $font-size-l;
 }

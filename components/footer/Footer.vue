@@ -21,7 +21,7 @@
     <div class="footer-info relative align-center bg-secondary py-20 px-40 zi-1">
       <p class="m-0 f-xs cl-white">
         Administratorem danych osobowych jest Stowarzyszenie Otwarte Klatki.
-        <router-link to="/" class="active nowrap">
+        <router-link to="/privacy-policy" class="active nowrap">
           Polityka prywatności
         </router-link>
       </p>

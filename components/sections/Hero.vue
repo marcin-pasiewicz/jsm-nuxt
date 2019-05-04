@@ -7,8 +7,11 @@
       <h1 class="cl-white">
         Jedz rośliny <br> Podnoś żelazo
       </h1>
-      <a v-scroll-to="'#about'" href="#" class="btn">Poznaj zasady diety fair play</a>
+      <a v-scroll-to="'#about'" href="/" class="btn">Poznaj zasady diety fair play</a>
     </div>
+    <a v-scroll-to="'#about'" href="/" class="scroll-indicator pointer absolute zi-1 p-40">
+      <i class="fas fa-chevron-down f-l cl-white" />
+    </a>
   </section>
 </template>
 
@@ -32,5 +35,15 @@ export default {
     top: 0;
     left: 0;
     z-index: -9;
+  }
+
+  .scroll-indicator {
+    bottom: 0;
+    opacity: 0.5;
+    transition: transform .5s ease;
+
+    &:hover {
+      transform: translateY(10px);
+    }
   }
 </style>
