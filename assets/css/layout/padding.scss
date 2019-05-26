@@ -1,9 +1,9 @@
 /* Padding */
-
+@import '../mixins/breakpoints';
 // Paddings
 $padding: 0 5 10 15 20 25 30 35 40 45 50 60 80 100;
-$padding-base: 80;
-$padding-base-mobile: 40;
+$padding-base: 80px;
+$padding-base-mobile: 40px;
 
 // Generators
 @mixin padding {
@@ -38,6 +38,21 @@ $padding-base-mobile: 40;
       padding-left: #{$i}px;
     }
   }
+}
+
+.px-base {
+  padding-right: $padding-base;
+  padding-left: $padding-base;
+
+  @include sm {
+    padding-right: $padding-base-mobile;
+    padding-left: $padding-base-mobile;
+  }
+}
+
+.py-base {
+  padding-top: $padding-base;
+  padding-bottom: $padding-base;
 }
 
 @include padding;

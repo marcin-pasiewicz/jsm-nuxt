@@ -1,5 +1,5 @@
 <template>
-  <section id="map" class="map flex relative bg-primary middle-xs center-xs p-80">
+  <section id="map" class="map flex relative bg-primary middle-xs center-xs px-base py-base">
     <div class="content">
       <h3>Mapa</h3>
       <p class="aling-center">

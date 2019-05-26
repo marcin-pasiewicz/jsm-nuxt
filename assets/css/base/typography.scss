@@ -58,6 +58,7 @@ a {
   &.active,
   &:hover {
     color: map-get($colors, gold);
+    outline: none;
   }
 }
 

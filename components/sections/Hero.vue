@@ -1,5 +1,5 @@
 <template>
-  <section id="hero" class="hero flex relative no-scroll middle-xs center-xs vh-100 px-40">
+  <section id="hero" class="hero flex relative no-scroll middle-xs center-xs vh-100 px-base">
     <video class="hero-video absolute vh-100" width="100%" autoplay muted loop>
       <source src="../../assets/video/bg.mp4" type="video/mp4">
     </video>

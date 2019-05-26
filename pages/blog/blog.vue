@@ -1,5 +1,5 @@
 <template>
-  <div class="blog relative middle-xs p-80">
+  <div class="blog relative middle-xs px-base py-base">
     <h1 class="center-xs m-0">
       Blog
     </h1>
@@ -20,13 +20,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-  @import '~assets/css/mixins/breakpoints.scss';
-
-  .blog {
-    @include sm {
-      padding: 80px 40px;
-    }
-  }
-</style>

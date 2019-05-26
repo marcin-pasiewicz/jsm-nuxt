@@ -1,5 +1,5 @@
 <template>
-  <section id="ebook" class="ebook flex relative bg-primary p-80">
+  <section id="ebook" class="ebook flex relative bg-primary px-base py-base">
     <div class="ebook-info flex flex-column center-xs align-left align-start w-50">
       <h2>Pobierz naszego ebooka</h2>
       <img class="block cover mobile-cover w-100 py-40" src="../../assets/img/ebook-cover.png" alt="Ebook" title="Ebook">
@@ -18,21 +18,26 @@
     <div class="ebook-cover flex flex-column middle-xs center-xs w-50 pl-40">
       <img class="block cover w-100" src="../../assets/img/ebook-cover.png" alt="Ebook" title="Ebook">
     </div>
-    <newsletter-popup :show-modal="showModal" @closeModal="closeModal" />
+    <newsletter-popup :show-modal="showModal" @closeModal="closeModal" @openMessage="openMessage" />
+    <newsletter-message :show-message="showMessage" :success="formSuccess" @closeMessage="closeMessage" />
   </section>
 </template>
 
 <script>
 import NewsletterPopup from '../newsletter/NewsletterPopup'
+import NewsletterMessage from '../newsletter/NewsletterMessage'
 
 export default {
   name: 'Ebook',
   components: {
-    NewsletterPopup
+    NewsletterPopup,
+    NewsletterMessage
   },
   data() {
     return {
-      showModal: false
+      showModal: false,
+      showMessage: false,
+      formSuccess: false
     }
   },
   methods: {
@@ -41,6 +46,13 @@ export default {
     },
     closeModal() {
       this.showModal = false
+    },
+    openMessage(success) {
+      this.showMessage = true
+      this.formSuccess = success
+    },
+    closeMessage() {
+      this.showMessage = false
     }
   }
 }
@@ -50,10 +62,6 @@ export default {
   @import '~assets/css/mixins/breakpoints.scss';
 
   .ebook {
-    @include sm {
-      padding: 80px 40px;
-    }
-
     .ebook-info {
       @include md {
         width: 60%;

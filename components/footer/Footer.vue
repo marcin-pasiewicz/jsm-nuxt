@@ -1,6 +1,6 @@
 <template>
   <footer class="relative cover">
-    <div class="footer-content relative flex py-80 px-40 middle-xs around-xs zi-1">
+    <div class="footer-content relative flex py-base px-base middle-xs around-xs zi-1">
       <h2 class="m-0 px-40">
         Chcesz działać <br> razem z nami?
       </h2>
@@ -18,7 +18,7 @@
         </ul>
       </div>
     </div>
-    <div class="footer-info relative align-center bg-secondary py-20 px-40 zi-1">
+    <div class="footer-info relative align-center bg-secondary py-20 px-base zi-1">
       <p class="m-0 f-xs cl-white">
         Administratorem danych osobowych jest Stowarzyszenie Otwarte Klatki.
         <router-link to="/privacy-policy" class="active nowrap">
@@ -46,7 +46,6 @@ export default {
     .footer-content {
       @include sm {
         flex-direction: column;
-        padding: 80px 40px;
       }
 
       h2 {

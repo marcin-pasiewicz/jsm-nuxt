@@ -1,16 +1,16 @@
 <template>
   <div class="navigation">
     <nav class="flex between-xs middle-xs" :class="{ active: mobileMenuActive, 'f-xs': isSticky}">
-      <router-link v-scroll-to="'#about'" to="/" class="mr-40 uppercase nav-link nowrap" @click.native="toggleNav">
+      <router-link v-scroll-to="'#about'" to="/#about" class="mr-40 uppercase nav-link nowrap" @click.native="toggleNav">
         O kampanii
       </router-link>
-      <router-link v-scroll-to="'#ebook'" class="mr-40 uppercase nav-link nowrap" to="/" @click.native="toggleNav">
+      <router-link v-scroll-to="'#ebook'" class="mr-40 uppercase nav-link nowrap" to="/#ebook" @click.native="toggleNav">
         Ebook
       </router-link>
-      <router-link v-scroll-to="'#ambassadors'" class="mr-40 uppercase nav-link nowrap" to="/" @click.native="toggleNav">
+      <router-link v-scroll-to="'#ambassadors'" class="mr-40 uppercase nav-link nowrap" to="/#ambassadors" @click.native="toggleNav">
         Ambasadorzy
       </router-link>
-      <router-link v-scroll-to="'#contact'" class="mr-40 uppercase nav-link nowrap" to="/" @click.native="toggleNav">
+      <router-link v-scroll-to="'#contact'" class="mr-40 uppercase nav-link nowrap" to="/#contact" @click.native="toggleNav">
         Kontakt
       </router-link>
       <router-link class="mr-40 uppercase nav-link nowrap cl-gold" to="/map" @click.native="toggleNav">
@@ -98,9 +98,18 @@ export default {
       display: block;
     }
 
+    &:hover {
+      color: map-get($colors, gold);
+      transition: all .5s ease-in-out;
+    }
+
     &.close-nav {
       right: 40px;
       top: 20px;
+
+      &.sticky {
+        top: 20px;
+      }
     }
   }
 </style>

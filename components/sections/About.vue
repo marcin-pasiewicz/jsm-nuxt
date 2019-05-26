@@ -1,5 +1,5 @@
 <template>
-  <section id="about" class="about flex relative bg-primary middle-xs center-xs p-80">
+  <section id="about" class="about flex relative bg-primary middle-xs center-xs px-base py-base">
     <div class="about-content content">
       <h3>
         O kampanii
@@ -19,13 +19,3 @@ export default {
   name: 'About'
 }
 </script>
-
-<style lang="scss" scoped>
-  @import '~assets/css/mixins/breakpoints.scss';
-
-  .about {
-    @include sm {
-      padding: 80px 40px;
-    }
-  }
-</style>

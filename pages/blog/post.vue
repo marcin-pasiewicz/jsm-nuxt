@@ -1,5 +1,5 @@
 <template>
-  <div class="post relative center-xs p-80">
+  <div class="post relative center-xs px-base py-base">
     <div class="post-heading content m-auto">
       <h2 class="post-title relative">
         LOREM IPSUM DOLOR
@@ -23,13 +23,8 @@
 
 <style lang="scss" scoped>
   @import '~assets/css/variables/colors.scss';
-  @import '~assets/css/mixins/breakpoints.scss';
 
   .post {
-    @include sm {
-      padding: 80px 40px;
-    }
-
     .post-title {
         &:after {
           content: '';

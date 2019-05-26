@@ -8,8 +8,7 @@
         <p class="f-s">
           Zasubskrybuj newsletter i odbierz e-booka! Znajdziesz w nim newsy ze świata sportowców, informacje o eventach, oraz kody rabatowe do zaprzyjaźnionych sklepów.
         </p>
-        <newsletter-form class="my-20" />
-        <small class="block">Szanujemy Twoją prywatność i zapewniamy, że podane informacje będą używane wyłącznie do celów związanych z wysyłaniem informacji o kampanii. Wszystkie informacje na temat przetwarzania Twoich danych osobowych znajdziesz w naszej polityce prywatności. Wypełniając formularz zgadzasz się na przetwarzanie Twoich danych osobowych związanych z komunikacją elektroniczną oraz potwierdzasz, że masz ukończony 16 rok życia.</small>
+        <newsletter-form class="my-20" @signedUp="openMessage" />
         <span class="modal-close" @click="closeModal"><i class="fas fa-times" /></span>
       </div>
     </div>
@@ -31,6 +30,10 @@ export default {
   },
   methods: {
     closeModal() {
+      this.$emit('closeModal')
+    },
+    openMessage(success) {
+      this.$emit('openMessage', success)
       this.$emit('closeModal')
     }
   }

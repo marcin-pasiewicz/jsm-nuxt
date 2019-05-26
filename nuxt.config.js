@@ -43,9 +43,15 @@ export default {
   */
   modules: [
     '@nuxtjs/pwa',
+    '@nuxtjs/axios',
+    '@nuxtjs/proxy',
     'vue-scrollto/nuxt',
     '~/modules/routes',
   ],
+
+  proxy: {
+    '/graphql': 'https://crm.otwarteklatki.pl',
+  },
 
   /*
   ** Build configuration
